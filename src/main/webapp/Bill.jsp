@@ -16,7 +16,7 @@
 
 	<div class="container"><div class="row"><div class="col-6">
 	
-	<h1>Bill Generation s</h1>
+	<h1>Bill Generations</h1>
 
 	<form id="formBill" name="formBill" method="post" action="Bill.jsp">
  		Owner Name:
