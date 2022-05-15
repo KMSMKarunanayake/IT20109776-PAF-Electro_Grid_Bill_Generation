@@ -44,7 +44,8 @@ public class Bill {
 		 
 			//check current reading is greater than pre reading.
 			if(preReading>currentReading) {
-				output = "Error while inserting the Bill.";	 
+				output = "{\"status\":\"error\", \"data\": \"Current reading must be greater than last reading.\"}";
+				 
 			}
 			else {
 			 
@@ -112,13 +113,13 @@ public class Bill {
 			
 			// Prepare the html table to be displayed
 			output = "<table border='1'><tr>"
-						+"<th>Name</th>"
+						+"<th>Consumer Name</th>"
 						+ "<th>Date</th>"
 						+"<th>Account Number</th>"
-						+"<th>Pre Reading</th>"
+						+"<th>Last Reading</th>"
 						+"<th>Currant Reading</th>"
 						+"<th>Units</th>"
-						+"<th>Total</th>"
+						+"<th>Total Amount (Rs.)</th>"
 						+"<th>Update</th><th>Remove</th></tr>";
 
 
@@ -160,7 +161,7 @@ public class Bill {
 		}
 		catch (Exception e)
 		{
-			output = "Error while reading the bill records.";
+			output = "{\"status\":\"error\", \"data\": \"Error while reading the bill records.\"}";
 			System.err.println(e.getMessage());
 		}
 		return output;
@@ -181,7 +182,7 @@ public class Bill {
 			
 			//check current reading is greater than pre-reading
 			if(preReading>currentReading) {
-				output = "Error while updating the Bill.";	 
+				output = "{\"status\":\"error\", \"data\": \"Current reading must be greater than last reading.\"}"; 
 			}
 			else {
 				 
@@ -258,7 +259,7 @@ public class Bill {
 			 	}
 			 	catch (Exception e)
 			 	{
-			 		output = "{\"status\":\"error\", \"data\": \"Error while updating the bill record.\"}";
+			 		output = "{\"status\":\"error\", \"data\": \"Error while deleting the bill record.\"}";
 			 		System.err.println(e.getMessage());
 			 	}
 			 	return output;
