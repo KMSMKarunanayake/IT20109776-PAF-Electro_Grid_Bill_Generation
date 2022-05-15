@@ -19,13 +19,13 @@
 	<h1>Bill Generations</h1>
 
 	<form id="formBill" name="formBill" method="post" action="Bill.jsp">
- 		Owner Name:
+ 			Consumer Name:
 			<input id="bName" name="bName" type="text" class="form-control form-control-sm">
 		<br> Date:
 			<input id="bDate" name="bDate" type="date" class="form-control form-control-sm">
 		<br> Account Number:
 			<input id="accNo" name="accNo" type="text" class="form-control form-control-sm">
-		<br> Pre Reading:
+		<br> Last Reading:
 			<input id="preReading" name="preReading" type="text" class="form-control form-control-sm">
 		<br> Current Reading:
 			<input id="currentReading" name="currentReading" type="text" class="form-control form-control-sm">
