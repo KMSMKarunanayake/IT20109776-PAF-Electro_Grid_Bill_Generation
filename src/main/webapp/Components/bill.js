@@ -39,6 +39,7 @@ $(document).on("click", "#btnSave", function(event)
 	
 });
 
+//Save function ===============================
 function onBillSaveComplete(response, status)
 	{
 	if (status == "success")
@@ -105,17 +106,6 @@ $(document).on("click", ".btnRemove", function(event)
  	});
 });
 
-
-// REMOVE==========================================
-$(document).on("click", ".remove", function(event)
-{
- 	$(this).closest(".Bill").remove();
-
- 	$("#alertSuccess").text("Removed successfully.");
- 	$("#alertSuccess").show();
-});
-
-
 //Delete function ================================
 function onBillDeleteComplete(response, status)
 {
@@ -146,33 +136,33 @@ function onBillDeleteComplete(response, status)
  	}
 }
 
-//Form validation ===================================
+//Client-mode (Form validation) ===================================
 function validateBillForm()
 {
-	// NAME
+	// Consumer name
 	if ($("#bName").val().trim() == "")
  	{
- 		return "Insert name.";
+ 		return "Please Enter Consumer Name.";
  	}
-	// DATE
+	// Date
 	if ($("#bDate").val().trim() == "")
  	{
- 		return "Insert Date.";
+ 		return "Please Enter Date.";
  	}
-	// ACCOUNT NUMBER
+	// Account number
 	if ($("#accNo").val().trim() == "")
 	{
- 		return "Insert Account Number.";
+ 		return "Please Enter Account Number.";
  	}
-	// PRE READING
+	// Last reading
 	if ($("#preReading").val().trim() == "")
  	{
- 		return "Insert Pre Reading Value.";
+ 		return "Please Enter Last Reading Value.";
  	}
-	// CURRENT READING
+	// Current reading
 	if ($("#currentReading").val().trim() == "")
 	{
- 		return "Insert Current Reading Value.";
+ 		return "Please Enter Current Reading Value.";
  	}
 
 	return true;
