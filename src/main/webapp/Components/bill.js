@@ -154,16 +154,19 @@ function validateBillForm()
 	{
  		return "Please Enter Account Number.";
  	}
-	// Last reading
-	if ($("#preReading").val().trim() == "")
- 	{
- 		return "Please Enter Last Reading Value.";
- 	}
-	// Current reading
-	if ($("#currentReading").val().trim() == "")
-	{
- 		return "Please Enter Current Reading Value.";
- 	}
+ 	// Last reading
+	 var preR = $("#preReading").val().trim();
+	 if (!$.isNumeric(preR)) 
+	 {
+		 return "Please Enter Last Reading Value.";
+	 }
+	 // Current reading
+	 var curR = $("#currentReading").val().trim();
+	 if (!$.isNumeric(curR)) 
+	 {
+		 return "Please Enter Current Reading Value.";
+	 }
+ 	
 
 	return true;
 }
