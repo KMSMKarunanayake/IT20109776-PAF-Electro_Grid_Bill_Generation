@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Bill Generation</title>
+<title>Bill generation page</title>
 
 	<link rel="stylesheet" href="Views/bootstrap.min.css">
 	<script src="Components/jquery-3.4.1.min.js"></script>
@@ -16,10 +16,10 @@
 
 	<div class="container"><div class="row"><div class="col-6">
 	
-	<h1>Bill Generations</h1>
+	<h1>Bill Generation</h1>
 
 	<form id="formBill" name="formBill" method="post" action="Bill.jsp">
- 			Consumer Name:
+ 			 Consumer Name:
 			<input id="bName" name="bName" type="text" class="form-control form-control-sm">
 		<br> Date:
 			<input id="bDate" name="bDate" type="date" class="form-control form-control-sm">
