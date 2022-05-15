@@ -136,7 +136,7 @@ function onBillDeleteComplete(response, status)
  	}
 }
 
-//Client-mode (Form validation) ===================================
+//Form validation ===================================
 function validateBillForm()
 {
 	// Consumer name
